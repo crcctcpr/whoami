@@ -48,7 +48,6 @@
     var roles = [
       'Information Security Specialist',
       'Cyber Incident Response Specialist',
-      'Malware Analysis Instructor',
       'Threat Hunter',
       'Incident Responder'
     ];
