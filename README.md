@@ -8,7 +8,7 @@ print-to-PDF stylesheet.
 
 ## 🔗 Live
 
-Served via GitHub Pages: **https://crcctcpr.github.io/whoami/**
+Live at **https://resume.cabrerapr.com/** (GitHub Pages + custom domain).
 
 ## Run locally
 
