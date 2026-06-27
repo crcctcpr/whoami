@@ -42,20 +42,48 @@
     nums.forEach(function (el) { io2.observe(el); });
   }
 
-  // rotating role subtitle
+  // --- i18n: EN/ES language toggle ---
+  var ROLES = {
+    en: ['Information Security Specialist','Cyber Incident Response Specialist','Threat Hunter','Incident Responder'],
+    es: ['Especialista en Seguridad de la Información','Especialista en Respuesta a Incidentes','Caza de Amenazas','Respondedor de Incidentes']
+  };
+  var TITLE = {
+    en: 'Carlos Cabrera — Information Security Specialist',
+    es: 'Carlos Cabrera — Especialista en Seguridad de la Información'
+  };
+  var lang = 'en';
+  try {
+    lang = localStorage.getItem('lang') ||
+      ((navigator.language || '').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+  } catch (e) {}
+
+  function setLang(l) {
+    lang = (l === 'es') ? 'es' : 'en';
+    document.documentElement.lang = lang;
+    document.title = TITLE[lang];
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    var btns = document.querySelectorAll('.langtoggle [data-setlang]');
+    for (var k = 0; k < btns.length; k++) {
+      btns[k].setAttribute('aria-pressed', btns[k].getAttribute('data-setlang') === lang ? 'true' : 'false');
+    }
+  }
+
+  var tbtns = document.querySelectorAll('.langtoggle [data-setlang]');
+  for (var b = 0; b < tbtns.length; b++) {
+    tbtns[b].addEventListener('click', function () { setLang(this.getAttribute('data-setlang')); });
+  }
+  setLang(lang);
+
+  // rotating role subtitle (localized — reads current language each tick)
   var roleEl = document.getElementById('role');
   if (roleEl) {
-    var roles = [
-      'Information Security Specialist',
-      'Cyber Incident Response Specialist',
-      'Threat Hunter',
-      'Incident Responder'
-    ];
     var i = 0;
+    roleEl.textContent = ROLES[lang][0];
     setInterval(function () {
-      i = (i + 1) % roles.length;
+      var list = ROLES[lang];
+      i = (i + 1) % list.length;
       roleEl.style.opacity = 0;
-      setTimeout(function () { roleEl.textContent = roles[i]; roleEl.style.opacity = 1; }, 280);
+      setTimeout(function () { roleEl.textContent = list[i]; roleEl.style.opacity = 1; }, 280);
     }, 3200);
     roleEl.style.transition = 'opacity .28s ease';
   }

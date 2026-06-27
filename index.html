@@ -21,6 +21,20 @@
 <link rel="canonical" href="https://resume.cabrerapr.com/">
 <meta name="theme-color" content="#0a0e14">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* --- i18n language toggle --- */
+  .t-es{display:none}
+  html[lang="es"] .t-en{display:none}
+  html[lang="es"] .t-es{display:inline}
+  .langtoggle{display:inline-flex;align-items:center;margin-left:.6rem;
+    border:1px solid rgba(255,255,255,.18);border-radius:999px;overflow:hidden;
+    background:rgba(255,255,255,.04);vertical-align:middle}
+  .langtoggle button{font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#9aa4b2;
+    background:transparent;border:0;padding:.26rem .56rem;cursor:pointer;line-height:1;
+    transition:background .15s,color .15s}
+  .langtoggle button[aria-pressed="true"]{background:#00e0a4;color:#06121a}
+  .langtoggle button:focus-visible{outline:2px solid #00e0a4;outline-offset:2px}
+</style>
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🛡️&lt;/text&gt;&lt;/svg&gt;">
 <!-- Fail-safe: if JS is off, show everything (don't hide content behind reveal animations) -->
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
@@ -32,12 +46,16 @@
 <nav id="nav">
   <a class="brand" href="#top"><span class="prompt">~/</span>cabrera</a>
   <div class="nav-links">
-    <a href="#about">about</a>
-    <a href="#skills">skills</a>
-    <a href="#experience">experience</a>
-    <a href="#projects">projects</a>
-    <a href="#education">certs</a>
-    <a href="#contact">contact</a>
+    <a href="#about"><span class="t-en">about</span><span class="t-es" lang="es">sobre&nbsp;mí</span></a>
+    <a href="#skills"><span class="t-en">skills</span><span class="t-es" lang="es">habilidades</span></a>
+    <a href="#experience"><span class="t-en">experience</span><span class="t-es" lang="es">experiencia</span></a>
+    <a href="#projects"><span class="t-en">projects</span><span class="t-es" lang="es">proyectos</span></a>
+    <a href="#education"><span class="t-en">certs</span><span class="t-es" lang="es">certificaciones</span></a>
+    <a href="#contact"><span class="t-en">contact</span><span class="t-es" lang="es">contacto</span></a>
+    <div class="langtoggle" role="group" aria-label="Language / Idioma">
+      <button type="button" data-setlang="en" aria-pressed="true">EN</button>
+      <button type="button" data-setlang="es" aria-pressed="false">ES</button>
+    </div>
   </div>
 </nav>
 
@@ -46,21 +64,23 @@
   <div class="hero-inner reveal">
     <div class="hero-text">
       <p class="kicker"><span class="blink">▌</span> whoami</p>
-      <p class="open-pill"><span class="pulse"></span> Open to opportunities</p>
+      <p class="open-pill"><span class="pulse"></span> <span class="t-en">Open to opportunities</span><span class="t-es" lang="es">Abierto a oportunidades</span></p>
       <h1>Carlos&nbsp;Cabrera</h1>
       <p class="role" id="role">Information Security Specialist</p>
       <p class="tagline">
-        Cyber Incident Response Specialist &amp; Information Security Specialist — finding, documenting,
+        <span class="t-en">Cyber Incident Response Specialist &amp; Information Security Specialist — finding, documenting,
         and neutralizing threats across industrial, legal, medical, educational, and banking
-        environments throughout Puerto&nbsp;Rico and the United&nbsp;States.
+        environments throughout Puerto&nbsp;Rico and the United&nbsp;States.</span><span class="t-es" lang="es">Especialista en Respuesta a Incidentes y Especialista en Seguridad de la Información —
+        detecto, documento y neutralizo amenazas en entornos industriales, legales, médicos,
+        educativos y bancarios en todo Puerto&nbsp;Rico y los Estados&nbsp;Unidos.</span>
       </p>
       <div class="hero-cta">
         <a class="btn primary" href="mailto:carlos@cabrerapr.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          Get in touch</a>
+          <span class="t-en">Get in touch</span><span class="t-es" lang="es">Contáctame</span></a>
         <a class="btn" href="resume.pdf" download="Carlos-Cabrera-Resume.pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-          Download CV</a>
+          <span class="t-en">Download CV</span><span class="t-es" lang="es">Descargar CV</span></a>
         <a class="btn" href="https://linkedin.com/in/carloscabrera" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
           LinkedIn</a>
@@ -73,8 +93,8 @@
       </div>
       <ul class="hero-meta">
         <li><span class="dot"></span> Puerto Rico</li>
-        <li><span class="dot"></span> Fully bilingual — EN / ES</li>
-        <li><span class="dot"></span> Open to hands-on security roles</li>
+        <li><span class="dot"></span> <span class="t-en">Fully bilingual — EN / ES</span><span class="t-es" lang="es">Totalmente bilingüe — EN / ES</span></li>
+        <li><span class="dot"></span> <span class="t-en">Open to hands-on security roles</span><span class="t-es" lang="es">Abierto a roles técnicos de seguridad</span></li>
       </ul>
     </div>
     <div class="hero-photo">
@@ -86,42 +106,48 @@
 <main>
 <!-- ===== ABOUT ===== -->
 <section id="about" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Professional Summary</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Professional Summary</span><span class="t-es" lang="es">Resumen Profesional</span></h2>
   <div class="card reveal">
     <p>
-      Information Security Specialist with deep experience across cybersecurity and information-systems
+      <span class="t-en">Information Security Specialist with deep experience across cybersecurity and information-systems
       management &amp; administration. I've been trusted to secure clients in the industrial, legal,
       medical, educational, and banking industries throughout Puerto&nbsp;Rico and the United&nbsp;States —
       finding, documenting, analyzing, and delivering technical solutions while building secure,
-      trusted business relationships.
+      trusted business relationships.</span><span class="t-es" lang="es">Especialista en Seguridad de la Información con amplia experiencia en ciberseguridad y en la
+      gestión y administración de sistemas de información. He sido la persona de confianza para proteger
+      a clientes de las industrias industrial, legal, médica, educativa y bancaria en todo Puerto&nbsp;Rico
+      y los Estados&nbsp;Unidos — detectando, documentando, analizando y entregando soluciones técnicas
+      mientras construyo relaciones de negocio seguras y de confianza.</span>
     </p>
     <p>
-      I help clients respond to incidents by discovering, reinforcing, and eliminating security risk,
+      <span class="t-en">I help clients respond to incidents by discovering, reinforcing, and eliminating security risk,
       and I deliver clear, actionable remediation plans. I'm currently looking for a challenging,
-      hands-on cybersecurity role to complement my career path.
+      hands-on cybersecurity role to complement my career path.</span><span class="t-es" lang="es">Ayudo a los clientes a responder ante incidentes descubriendo, reforzando y eliminando el riesgo
+      de seguridad, y entrego planes de remediación claros y accionables. Actualmente busco un rol
+      técnico y retador en ciberseguridad que complemente mi trayectoria profesional.</span>
     </p>
     <div class="stats">
-      <div class="stat"><span class="num" data-count="10">10+</span><span class="lbl">Years in security &amp; IT</span></div>
-      <div class="stat"><span class="num" data-count="5">5</span><span class="lbl">Industries secured</span></div>
-      <div class="stat"><span class="num" data-count="7">7</span><span class="lbl">Industry certifications</span></div>
+      <div class="stat"><span class="num" data-count="10">10+</span><span class="lbl"><span class="t-en">Years in security &amp; IT</span><span class="t-es" lang="es">Años en seguridad e IT</span></span></div>
+      <div class="stat"><span class="num" data-count="5">5</span><span class="lbl"><span class="t-en">Industries secured</span><span class="t-es" lang="es">Industrias protegidas</span></span></div>
+      <div class="stat"><span class="num" data-count="7">7</span><span class="lbl"><span class="t-en">Industry certifications</span><span class="t-es" lang="es">Certificaciones</span></span></div>
     </div>
   </div>
 </section>
 
 <!-- ===== SKILLS ===== -->
 <section id="skills" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Technical Skills</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Technical Skills</span><span class="t-es" lang="es">Habilidades Técnicas</span></h2>
   <div class="skills-grid">
     <div class="card skill-group reveal">
-      <h3>Languages</h3>
+      <h3><span class="t-en">Languages</span><span class="t-es" lang="es">Lenguajes</span></h3>
       <div class="chips"><span>Bash</span><span>Python</span><span>PowerShell</span><span>PHP</span><span>HTML</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Security &amp; Detection</h3>
+      <h3><span class="t-en">Security &amp; Detection</span><span class="t-es" lang="es">Seguridad y Detección</span></h3>
       <div class="chips"><span>Incident Response</span><span>Threat Hunting</span><span>SOC / NOC</span><span>Penetration Testing</span><span>Vulnerability Mgmt</span><span>Malware Sandboxing</span><span>Phishing Analysis</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Frameworks &amp; Standards</h3>
+      <h3><span class="t-en">Frameworks &amp; Standards</span><span class="t-es" lang="es">Marcos y Estándares</span></h3>
       <div class="chips"><span>MITRE ATT&amp;CK</span><span>NIST</span><span>FINRA</span><span>HIPAA</span><span>SOC 2</span></div>
     </div>
     <div class="card skill-group reveal">
@@ -129,27 +155,27 @@
       <div class="chips"><span>Palo Alto</span><span>FortiGate</span><span>Cisco Meraki</span><span>pfSense</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Endpoint / AV</h3>
+      <h3><span class="t-en">Endpoint / AV</span><span class="t-es" lang="es">Endpoint / Antivirus</span></h3>
       <div class="chips"><span>McAfee ePO</span><span>Sophos Central</span><span>Palo Alto TRAPS</span><span>Microsoft Defender</span><span>ESET</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>SIEM &amp; Logging</h3>
+      <h3><span class="t-en">SIEM &amp; Logging</span><span class="t-es" lang="es">SIEM y Registros</span></h3>
       <div class="chips"><span>Elastic</span><span>Graylog</span><span>NX-Log</span><span>Tenable.io</span><span>Security Center</span><span>KnowBe4</span><span>ProofPoint</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Platforms</h3>
+      <h3><span class="t-en">Platforms</span><span class="t-es" lang="es">Plataformas</span></h3>
       <div class="chips"><span>Windows</span><span>Linux</span><span>Unix</span><span>FreeBSD</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Virtualization &amp; Cloud</h3>
+      <h3><span class="t-en">Virtualization &amp; Cloud</span><span class="t-es" lang="es">Virtualización y Nube</span></h3>
       <div class="chips"><span>VMware ESXi</span><span>Proxmox</span><span>Hyper-V</span><span>Citrix</span><span>Xen</span><span>Azure</span><span>AWS</span><span>DigitalOcean</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Infrastructure &amp; Data</h3>
+      <h3><span class="t-en">Infrastructure &amp; Data</span><span class="t-es" lang="es">Infraestructura y Datos</span></h3>
       <div class="chips"><span>Active Directory</span><span>System Center</span><span>WSUS</span><span>TSQL</span><span>MySQL</span><span>SQLite</span><span>IIS</span><span>Apache</span><span>NGINX</span></div>
     </div>
     <div class="card skill-group reveal">
-      <h3>Backup / DR</h3>
+      <h3><span class="t-en">Backup / DR</span><span class="t-es" lang="es">Respaldo / DR</span></h3>
       <div class="chips"><span>Veeam</span><span>Iperius</span><span>Druva</span><span>EaseUS</span></div>
     </div>
   </div>
@@ -157,75 +183,75 @@
 
 <!-- ===== EXPERIENCE ===== -->
 <section id="experience" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Work Experience</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Work Experience</span><span class="t-es" lang="es">Experiencia Laboral</span></h2>
   <div class="timeline">
 
     <article class="tl-item card reveal">
       <div class="tl-head">
-        <div><h3>Cyber Incident Response Specialist</h3><p class="org">Evertec · San Juan, PR · Hybrid</p></div>
-        <span class="when">Jun 2024 — Present</span>
+        <div><h3><span class="t-en">Cyber Incident Response Specialist</span><span class="t-es" lang="es">Especialista en Respuesta a Incidentes Cibernéticos</span></h3><p class="org">Evertec · San Juan, PR · <span class="t-en">Hybrid</span><span class="t-es" lang="es">Híbrido</span></p></div>
+        <span class="when">Jun 2024 — <span class="t-en">Present</span><span class="t-es" lang="es">Presente</span></span>
       </div>
       <ul>
-        <li>Receive and investigate incident reports from internal stakeholders; conduct root-cause analysis.</li>
-        <li>Develop and execute containment, eradication, and recovery strategies across cross-functional teams.</li>
-        <li>Threat hunting with threat-intelligence and advanced analytics to proactively surface emerging threats and attack vectors.</li>
-        <li>Run vulnerability assessments and penetration testing to identify weaknesses.</li>
-        <li>Ensure adherence to industry standards and regulatory requirements (NIST, FINRA); maintain detailed incident records.</li>
+        <li><span class="t-en">Receive and investigate incident reports from internal stakeholders; conduct root-cause analysis.</span><span class="t-es" lang="es">Recibo e investigo reportes de incidentes de las partes internas; realizo análisis de causa raíz.</span></li>
+        <li><span class="t-en">Develop and execute containment, eradication, and recovery strategies across cross-functional teams.</span><span class="t-es" lang="es">Desarrollo y ejecuto estrategias de contención, erradicación y recuperación junto a equipos multidisciplinarios.</span></li>
+        <li><span class="t-en">Threat hunting with threat-intelligence and advanced analytics to proactively surface emerging threats and attack vectors.</span><span class="t-es" lang="es">Caza de amenazas con inteligencia de amenazas y analítica avanzada para descubrir proactivamente amenazas emergentes y vectores de ataque.</span></li>
+        <li><span class="t-en">Run vulnerability assessments and penetration testing to identify weaknesses.</span><span class="t-es" lang="es">Ejecuto evaluaciones de vulnerabilidades y pruebas de penetración para identificar debilidades.</span></li>
+        <li><span class="t-en">Ensure adherence to industry standards and regulatory requirements (NIST, FINRA); maintain detailed incident records.</span><span class="t-es" lang="es">Aseguro el cumplimiento de estándares de la industria y requisitos regulatorios (NIST, FINRA); mantengo registros detallados de incidentes.</span></li>
       </ul>
     </article>
 
     <article class="tl-item card reveal">
       <div class="tl-head">
-        <div><h3>Information Security Specialist</h3><p class="org">TeleMedik · Guaynabo, PR</p></div>
+        <div><h3><span class="t-en">Information Security Specialist</span><span class="t-es" lang="es">Especialista en Seguridad de la Información</span></h3><p class="org">TeleMedik · Guaynabo, PR</p></div>
         <span class="when">Jun 2021 — Jul 2024</span>
       </div>
       <ul>
-        <li>Own and maintain the organization's information-security framework — policies, procedures, standards, and guidelines — alongside the IT Director.</li>
-        <li>Lead the information-security strategy and report security gaps, strategies, and results to the Compliance Committee.</li>
-        <li>Ensure administrative, physical, and technical safeguards protect security assets from internal and external threats; test them regularly.</li>
-        <li>Own the security-incident and vulnerability-management processes end to end; run security monitoring and annual audits.</li>
-        <li>Ensure compliance with state and federal healthcare regulations, including HIPAA.</li>
+        <li><span class="t-en">Own and maintain the organization's information-security framework — policies, procedures, standards, and guidelines — alongside the IT Director.</span><span class="t-es" lang="es">Mantengo el marco de seguridad de la información de la organización — políticas, procedimientos, estándares y guías — junto al Director de TI.</span></li>
+        <li><span class="t-en">Lead the information-security strategy and report security gaps, strategies, and results to the Compliance Committee.</span><span class="t-es" lang="es">Lidero la estrategia de seguridad de la información y reporto brechas, estrategias y resultados al Comité de Cumplimiento.</span></li>
+        <li><span class="t-en">Ensure administrative, physical, and technical safeguards protect security assets from internal and external threats; test them regularly.</span><span class="t-es" lang="es">Aseguro que las salvaguardas administrativas, físicas y técnicas protejan los activos de seguridad ante amenazas internas y externas; las pruebo regularmente.</span></li>
+        <li><span class="t-en">Own the security-incident and vulnerability-management processes end to end; run security monitoring and annual audits.</span><span class="t-es" lang="es">Gestiono de extremo a extremo los procesos de incidentes de seguridad y de gestión de vulnerabilidades; ejecuto monitoreo de seguridad y auditorías anuales.</span></li>
+        <li><span class="t-en">Ensure compliance with state and federal healthcare regulations, including HIPAA.</span><span class="t-es" lang="es">Aseguro el cumplimiento de regulaciones de salud estatales y federales, incluyendo HIPAA.</span></li>
       </ul>
     </article>
 
     <article class="tl-item card reveal">
       <div class="tl-head">
-        <div><h3>Information Security Analyst II</h3><p class="org">Cortelco Systems PR · Caguas, PR</p></div>
+        <div><h3><span class="t-en">Information Security Analyst II</span><span class="t-es" lang="es">Analista de Seguridad de la Información II</span></h3><p class="org">Cortelco Systems PR · Caguas, PR</p></div>
         <span class="when">Jul 2018 — Jun 2021</span>
       </div>
       <ul>
-        <li>Delivered managed security services (MSP) across industries — SOC/NOC development, provisioning, and log analytics.</li>
-        <li>Firewall management: rule creation, hardening, reporting, and Python API development for custom reports.</li>
-        <li>McAfee ePO, EndPoint, and SIEM management; ProofPoint Secure Email Gateway, phishing, and malware analysis.</li>
-        <li>Built Graylog / NX-Log collectors and regex-driven dashboards to correlate events and identify threats.</li>
-        <li>Vulnerability scanning via Tenable.io and Security Center; phishing-awareness training with KnowBe4.</li>
-        <li>Performed scheduled penetration testing and delivered remediation reports on misconfigurations, risk, and data exposure.</li>
+        <li><span class="t-en">Delivered managed security services (MSP) across industries — SOC/NOC development, provisioning, and log analytics.</span><span class="t-es" lang="es">Brindé servicios de seguridad administrados (MSP) en múltiples industrias — desarrollo de SOC/NOC, aprovisionamiento y analítica de registros.</span></li>
+        <li><span class="t-en">Firewall management: rule creation, hardening, reporting, and Python API development for custom reports.</span><span class="t-es" lang="es">Gestión de firewalls: creación de reglas, hardening, reportería y desarrollo de APIs en Python para reportes personalizados.</span></li>
+        <li><span class="t-en">McAfee ePO, EndPoint, and SIEM management; ProofPoint Secure Email Gateway, phishing, and malware analysis.</span><span class="t-es" lang="es">Gestión de McAfee ePO, EndPoint y SIEM; ProofPoint Secure Email Gateway, análisis de phishing y malware.</span></li>
+        <li><span class="t-en">Built Graylog / NX-Log collectors and regex-driven dashboards to correlate events and identify threats.</span><span class="t-es" lang="es">Construí colectores Graylog / NX-Log y dashboards basados en regex para correlacionar eventos e identificar amenazas.</span></li>
+        <li><span class="t-en">Vulnerability scanning via Tenable.io and Security Center; phishing-awareness training with KnowBe4.</span><span class="t-es" lang="es">Escaneo de vulnerabilidades con Tenable.io y Security Center; capacitación de concientización sobre phishing con KnowBe4.</span></li>
+        <li><span class="t-en">Performed scheduled penetration testing and delivered remediation reports on misconfigurations, risk, and data exposure.</span><span class="t-es" lang="es">Realicé pruebas de penetración programadas y entregué reportes de remediación sobre configuraciones erróneas, riesgo y exposición de datos.</span></li>
       </ul>
     </article>
 
     <article class="tl-item card reveal">
       <div class="tl-head">
-        <div><h3>Information Security Technician</h3><p class="org">Computer Pro PR · San Juan, PR</p></div>
+        <div><h3><span class="t-en">Information Security Technician</span><span class="t-es" lang="es">Técnico de Seguridad de la Información</span></h3><p class="org">Computer Pro PR · San Juan, PR</p></div>
         <span class="when">Jun 2017 — Jun 2018</span>
       </div>
       <ul>
-        <li>Supported the CISO and security team on access provisioning, log analysis, and network security.</li>
-        <li>Reviewed IDS logs for intrusions — brute-forcing, email phishing, malware spread, and more.</li>
-        <li>Provided proactive malware analysis through sandboxing to block and attribute threats.</li>
-        <li>Managed the MobileIron MDM platform, building secure device profiles to company security metrics.</li>
+        <li><span class="t-en">Supported the CISO and security team on access provisioning, log analysis, and network security.</span><span class="t-es" lang="es">Apoyé al CISO y al equipo de seguridad en aprovisionamiento de accesos, análisis de registros y seguridad de red.</span></li>
+        <li><span class="t-en">Reviewed IDS logs for intrusions — brute-forcing, email phishing, malware spread, and more.</span><span class="t-es" lang="es">Revisé registros de IDS en busca de intrusiones — ataques de fuerza bruta, phishing por correo, propagación de malware y más.</span></li>
+        <li><span class="t-en">Provided proactive malware analysis through sandboxing to block and attribute threats.</span><span class="t-es" lang="es">Realicé análisis proactivo de malware mediante sandboxing para bloquear y atribuir amenazas.</span></li>
+        <li><span class="t-en">Managed the MobileIron MDM platform, building secure device profiles to company security metrics.</span><span class="t-es" lang="es">Administré la plataforma MDM MobileIron, creando perfiles de dispositivos seguros según las métricas de seguridad de la empresa.</span></li>
       </ul>
     </article>
 
     <article class="tl-item card reveal">
       <div class="tl-head">
-        <div><h3>Director of IT</h3><p class="org">Umeco Puerto Rico · San Juan, PR</p></div>
+        <div><h3><span class="t-en">Director of IT</span><span class="t-es" lang="es">Director de TI</span></h3><p class="org">Umeco Puerto Rico · San Juan, PR</p></div>
         <span class="when">Feb 2014 — Jun 2017</span>
       </div>
       <ul>
-        <li>Maintained continuity, confidentiality, integrity, and availability of UMECO's information systems.</li>
-        <li>Led network-security design, troubleshooting, and incident debugging.</li>
-        <li>Developed and maintained the ERP system plus the company's web presence and online sales portal.</li>
-        <li>Configured assistive communicator systems for ALS patients; oversaw backup and recovery strategy.</li>
+        <li><span class="t-en">Maintained continuity, confidentiality, integrity, and availability of UMECO's information systems.</span><span class="t-es" lang="es">Mantuve la continuidad, confidencialidad, integridad y disponibilidad de los sistemas de información de UMECO.</span></li>
+        <li><span class="t-en">Led network-security design, troubleshooting, and incident debugging.</span><span class="t-es" lang="es">Lideré el diseño de seguridad de red, la resolución de problemas y la depuración de incidentes.</span></li>
+        <li><span class="t-en">Developed and maintained the ERP system plus the company's web presence and online sales portal.</span><span class="t-es" lang="es">Desarrollé y mantuve el sistema ERP junto con la presencia web de la empresa y el portal de ventas en línea.</span></li>
+        <li><span class="t-en">Configured assistive communicator systems for ALS patients; oversaw backup and recovery strategy.</span><span class="t-es" lang="es">Configuré sistemas de comunicación asistida para pacientes de ELA; supervisé la estrategia de respaldo y recuperación.</span></li>
       </ul>
     </article>
 
@@ -234,58 +260,69 @@
 
 <!-- ===== PROJECTS ===== -->
 <section id="projects" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Projects &amp; Portfolio</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Projects &amp; Portfolio</span><span class="t-es" lang="es">Proyectos y Portafolio</span></h2>
   <div class="proj-grid">
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>stingray-detector</h3><span class="proj-tag">RF security</span></div>
-      <p>A passive, receive-only toolkit for detecting IMSI catchers / cell-site simulators ("Stingrays")
+      <div class="proj-head"><h3>stingray-detector</h3><span class="proj-tag"><span class="t-en">RF security</span><span class="t-es" lang="es">seguridad RF</span></span></div>
+      <p><span class="t-en">A passive, receive-only toolkit for detecting IMSI catchers / cell-site simulators ("Stingrays")
       with an SDR — combining cell-topology heuristics (duplicate coverage, power &amp; appearance anomalies)
-      with GSM physical-layer analysis of recorded IQ to flag rogue base stations.</p>
+      with GSM physical-layer analysis of recorded IQ to flag rogue base stations.</span><span class="t-es" lang="es">Un kit pasivo, de solo recepción, para detectar IMSI-catchers / simuladores de celdas («Stingrays»)
+      con un SDR — combinando heurísticas de topología celular (cobertura duplicada, anomalías de potencia
+      y de aparición) con análisis de capa física GSM sobre IQ grabado para señalar estaciones base maliciosas.</span></p>
       <div class="chips small"><span>Python</span><span>NumPy</span><span>SDR / HackRF</span><span>LTE / GSM</span><span>srsRAN</span></div>
-      <a class="proj-link" href="https://github.com/crcctcpr/stingray-detector" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <a class="proj-link" href="https://github.com/crcctcpr/stingray-detector" target="_blank" rel="noopener"><span class="t-en">View on GitHub ↗</span><span class="t-es" lang="es">Ver en GitHub ↗</span></a>
     </div>
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>yaris-xp90-repair</h3><span class="proj-tag">automotive / CAN</span></div>
-      <p>A repair knowledge base + read-only Python <strong>OBD-II / CAN-bus diagnostics toolkit</strong>
+      <div class="proj-head"><h3>yaris-xp90-repair</h3><span class="proj-tag"><span class="t-en">automotive / CAN</span><span class="t-es" lang="es">automotriz / CAN</span></span></div>
+      <p><span class="t-en">A repair knowledge base + read-only Python <strong>OBD-II / CAN-bus diagnostics toolkit</strong>
       for the Toyota Yaris over a cheap ELM327 — ISO-TP frame reassembly, manufacturer enhanced-mode
       (service 0x21) discovery, live data, and fuel-trim/MAF analysis. Includes a from-scratch guide so
-      others can build diagnostics for their own vehicle.</p>
+      others can build diagnostics for their own vehicle.</span><span class="t-es" lang="es">Una base de conocimiento de reparación + un <strong>kit de diagnóstico OBD-II / CAN-bus</strong> en Python
+      (solo lectura) para el Toyota Yaris con un ELM327 económico — reensamblaje de tramas ISO-TP, descubrimiento
+      del modo extendido del fabricante (servicio 0x21), datos en vivo y análisis de fuel-trim/MAF. Incluye una
+      guía desde cero para que otros construyan diagnósticos para su propio vehículo.</span></p>
       <div class="chips small"><span>Python</span><span>OBD-II</span><span>CAN bus</span><span>ELM327</span><span>pyserial</span><span>reverse engineering</span></div>
-      <a class="proj-link" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <a class="proj-link" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener"><span class="t-en">View on GitHub ↗</span><span class="t-es" lang="es">Ver en GitHub ↗</span></a>
     </div>
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>Self-Hosted Security Lab</h3><span class="proj-tag">home lab</span></div>
-      <p>A production-style lab I built and run to sharpen blue-team skills: hypervisor virtualization,
+      <div class="proj-head"><h3><span class="t-en">Self-Hosted Security Lab</span><span class="t-es" lang="es">Laboratorio de Seguridad Autohospedado</span></h3><span class="proj-tag"><span class="t-en">home lab</span><span class="t-es" lang="es">laboratorio</span></span></div>
+      <p><span class="t-en">A production-style lab I built and run to sharpen blue-team skills: hypervisor virtualization,
       a segmented firewall with VLANs, a SIEM for log collection and alerting, self-hosted internal
-      services, and an isolated sandbox for safe malware detonation and analysis.</p>
+      services, and an isolated sandbox for safe malware detonation and analysis.</span><span class="t-es" lang="es">Un laboratorio estilo producción que construí y opero para afinar habilidades de blue team: virtualización
+      con hipervisor, un firewall segmentado con VLANs, un SIEM para recolección de registros y alertas,
+      servicios internos autohospedados y un sandbox aislado para detonar y analizar malware de forma segura.</span></p>
       <div class="chips small"><span>Proxmox</span><span>pfSense / OPNsense</span><span>Wazuh SIEM</span><span>VLAN segmentation</span><span>FlareVM</span><span>Docker</span></div>
     </div>
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>SecurityScripts</h3><span class="proj-tag">open source</span></div>
-      <p>A growing collection of security and incident-response scripts and tooling — practical utilities
-      from real analysis and response work.</p>
+      <div class="proj-head"><h3>SecurityScripts</h3><span class="proj-tag"><span class="t-en">open source</span><span class="t-es" lang="es">código abierto</span></span></div>
+      <p><span class="t-en">A growing collection of security and incident-response scripts and tooling — practical utilities
+      from real analysis and response work.</span><span class="t-es" lang="es">Una colección creciente de scripts y herramientas de seguridad y respuesta a incidentes — utilidades
+      prácticas surgidas de trabajo real de análisis y respuesta.</span></p>
       <div class="chips small"><span>Bash</span><span>PowerShell</span><span>Windows IR</span></div>
-      <a class="proj-link" href="https://github.com/crcctcpr/SecurityScripts" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <a class="proj-link" href="https://github.com/crcctcpr/SecurityScripts" target="_blank" rel="noopener"><span class="t-en">View on GitHub ↗</span><span class="t-es" lang="es">Ver en GitHub ↗</span></a>
     </div>
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>Exam-Prep Study Apps</h3><span class="proj-tag">tooling</span></div>
-      <p>Self-built, offline, dependency-free study applications for security certifications
+      <div class="proj-head"><h3><span class="t-en">Exam-Prep Study Apps</span><span class="t-es" lang="es">Apps de Estudio para Certificaciones</span></h3><span class="proj-tag"><span class="t-en">tooling</span><span class="t-es" lang="es">herramientas</span></span></div>
+      <p><span class="t-en">Self-built, offline, dependency-free study applications for security certifications
       (Security+, AI-security) — weighted practice exams, flashcards, and notes. Demonstrates
-      curriculum design and front-end build skills.</p>
+      curriculum design and front-end build skills.</span><span class="t-es" lang="es">Aplicaciones de estudio propias, sin conexión y sin dependencias, para certificaciones de seguridad
+      (Security+, seguridad de IA) — exámenes de práctica ponderados, tarjetas de memoria y notas. Demuestran
+      diseño curricular y habilidades de desarrollo front-end.</span></p>
       <div class="chips small"><span>JavaScript</span><span>HTML / CSS</span><span>Python</span></div>
     </div>
 
     <div class="card proj reveal">
-      <div class="proj-head"><h3>This Résumé Site</h3><span class="proj-tag">web</span></div>
-      <p>A self-contained, dependency-free single-page site (no framework, no build step) deployed on
-      GitHub Pages — the page you're reading.</p>
+      <div class="proj-head"><h3><span class="t-en">This Résumé Site</span><span class="t-es" lang="es">Este Sitio de Currículum</span></h3><span class="proj-tag">web</span></div>
+      <p><span class="t-en">A self-contained, dependency-free single-page site (no framework, no build step) deployed on
+      GitHub Pages — the page you're reading.</span><span class="t-es" lang="es">Un sitio de una sola página, autocontenido y sin dependencias (sin framework ni paso de build),
+      desplegado en GitHub Pages — la página que estás leyendo.</span></p>
       <div class="chips small"><span>Vanilla JS</span><span>Responsive</span><span>GitHub Pages</span></div>
-      <a class="proj-link" href="https://github.com/crcctcpr/whoami" target="_blank" rel="noopener">View source ↗</a>
+      <a class="proj-link" href="https://github.com/crcctcpr/whoami" target="_blank" rel="noopener"><span class="t-en">View source ↗</span><span class="t-es" lang="es">Ver código ↗</span></a>
     </div>
 
   </div>
@@ -293,28 +330,28 @@
 
 <!-- ===== EDUCATION & CERTS ===== -->
 <section id="education" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Education &amp; Certifications</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Education &amp; Certifications</span><span class="t-es" lang="es">Educación y Certificaciones</span></h2>
   <div class="edu-grid">
     <div class="card edu reveal">
-      <h3>Bachelor of Business Administration — Information Systems</h3>
+      <h3><span class="t-en">Bachelor of Business Administration — Information Systems</span><span class="t-es" lang="es">Bachillerato en Administración de Empresas — Sistemas de Información</span></h3>
       <p class="org">SUAGM (SUAM) · Cupey, PR</p>
       <span class="when">2020</span>
     </div>
     <div class="card certs reveal">
-      <h3>Certifications</h3>
+      <h3><span class="t-en">Certifications</span><span class="t-es" lang="es">Certificaciones</span></h3>
       <ul class="cert-list">
-        <li><span>CompTIA Security+ (ce)</span><em>Verified ✓</em></li>
-        <li><span>MITRE ATT&amp;CK Fundamentals — MAD20</span><em>Verified ✓</em></li>
+        <li><span>CompTIA Security+ (ce)</span><em><span class="t-en">Verified ✓</span><span class="t-es" lang="es">Verificado ✓</span></em></li>
+        <li><span>MITRE ATT&amp;CK Fundamentals — MAD20</span><em><span class="t-en">Verified ✓</span><span class="t-es" lang="es">Verificado ✓</span></em></li>
         <li><span>Recorded Future Certified Analyst</span><em>2025</em></li>
         <li><span>CompTIA PenTest+</span><em>2021</em></li>
         <li><span>Tenable Certified Sales Associate (TCSA)</span><em>2021</em></li>
         <li><span>Palo Alto Networks PSE: Endpoint Associate</span><em>—</em></li>
-        <li><span>CompTIA A+ <small>· good for life</small></span><em>2004</em></li>
+        <li><span>CompTIA A+ <small>· <span class="t-en">good for life</span><span class="t-es" lang="es">vigente de por vida</span></small></span><em>2004</em></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="badges-title reveal"><span class="hash">&gt;</span> Verified badges</h3>
+  <h3 class="badges-title reveal"><span class="hash">&gt;</span> <span class="t-en">Verified badges</span><span class="t-es" lang="es">Insignias verificadas</span></h3>
   <div class="badges reveal">
     <a class="badge" href="https://www.credly.com/badges/23a8ff8e-9afd-409c-8776-9ebb45f0b5a8" target="_blank" rel="noopener" title="Verify CompTIA Security+ on Credly">
       <img src="https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob" alt="CompTIA Security+ ce badge" loading="lazy" width="120" height="120">
@@ -326,14 +363,14 @@
     </a>
     <a class="badge expired" href="https://www.credly.com/badges/470b3c8f-64e4-42b1-8de7-2b0db6ad9868" target="_blank" rel="noopener" title="Verify CompTIA PenTest+ on Credly (expired)">
       <img src="https://images.credly.com/size/340x340/images/c7ac176b-15a3-4726-827a-e8cee8fe44dc/blob" alt="CompTIA PenTest+ ce badge" loading="lazy" width="120" height="120">
-      <span>CompTIA PenTest+ <em>ce · expired</em></span>
+      <span>CompTIA PenTest+ <em>ce · <span class="t-en">expired</span><span class="t-es" lang="es">expirada</span></em></span>
     </a>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="section">
-  <h2 class="reveal"><span class="hash">#</span> Contact</h2>
+  <h2 class="reveal"><span class="hash">#</span> <span class="t-en">Contact</span><span class="t-es" lang="es">Contacto</span></h2>
   <div class="card contact reveal">
     <p class="terminal-line"><span class="prompt">cabrera@sec:~$</span> <span class="typed">cat contact.txt</span></p>
     <div class="contact-links">
@@ -341,7 +378,7 @@
       <a href="https://linkedin.com/in/carloscabrera" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span> linkedin.com/in/carloscabrera</a>
       <a href="https://github.com/crcctcpr" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span> github.com/crcctcpr</a>
       <a href="https://youtube.com/@carloscabrera655" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.8 3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></span> youtube.com/@carloscabrera655</a>
-      <a href="resume.pdf" download="Carlos-Cabrera-Resume.pdf"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></span> Download résumé (PDF)</a>
+      <a href="resume.pdf" download="Carlos-Cabrera-Resume.pdf"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></span> <span class="t-en">Download résumé (PDF)</span><span class="t-es" lang="es">Descargar currículum (PDF)</span></a>
       <span class="loc"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span> Puerto Rico · EN / ES</span>
     </div>
   </div>
@@ -349,7 +386,7 @@
 </main>
 
 <footer>
-  <p>© <span id="year">2026</span> Carlos Cabrera · Built with plain HTML/CSS/JS — <a href="https://github.com/crcctcpr" target="_blank" rel="noopener">source on GitHub</a></p>
+  <p>© <span id="year">2026</span> Carlos Cabrera · <span class="t-en">Built with plain HTML/CSS/JS — <a href="https://github.com/crcctcpr" target="_blank" rel="noopener">source on GitHub</a></span><span class="t-es" lang="es">Hecho con HTML/CSS/JS puro — <a href="https://github.com/crcctcpr" target="_blank" rel="noopener">código en GitHub</a></span></p>
 </footer>
 
 <script src="app.js"></script>
