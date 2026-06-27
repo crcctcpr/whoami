@@ -34,6 +34,11 @@
     transition:background .15s,color .15s}
   .langtoggle button[aria-pressed="true"]{background:#00e0a4;color:#06121a}
   .langtoggle button:focus-visible{outline:2px solid #00e0a4;outline-offset:2px}
+  /* --- project screenshot thumbnail --- */
+  .proj-shot{display:block;margin:2px 0 13px;border:1px solid rgba(255,255,255,.1);border-radius:8px;
+    overflow:hidden;line-height:0;transition:border-color .2s}
+  .proj-shot:hover{border-color:#00e0a4}
+  .proj-shot img{width:100%;height:auto;display:block}
 </style>
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🛡️&lt;/text&gt;&lt;/svg&gt;">
 <!-- Fail-safe: if JS is off, show everything (don't hide content behind reveal animations) -->
@@ -276,6 +281,7 @@
 
     <div class="card proj reveal">
       <div class="proj-head"><h3>yaris-xp90-repair</h3><span class="proj-tag"><span class="t-en">automotive / CAN</span><span class="t-es" lang="es">automotriz / CAN</span></span></div>
+      <a class="proj-shot" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener"><img src="webdash.png" alt="Yaris web dashboard — live gauges and fuel-trim / MAF charts from a sample drive log" loading="lazy" width="1920" height="953"></a>
       <p><span class="t-en">A repair knowledge base + read-only Python <strong>OBD-II / CAN-bus diagnostics toolkit</strong>
       for the Toyota Yaris over a cheap ELM327 — ISO-TP frame reassembly, manufacturer enhanced-mode
       (service 0x21) discovery, live data, and fuel-trim/MAF analysis. Includes a from-scratch guide so
