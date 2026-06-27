@@ -8,8 +8,17 @@
 <meta name="author" content="Carlos Cabrera">
 <!-- Open Graph -->
 <meta property="og:title" content="Carlos Cabrera — Information Security Specialist">
-<meta property="og:description" content="Cyber Incident Responder & Information Security Officer. 10+ years securing industrial, legal, medical, educational & banking clients.">
+<meta property="og:description" content="Cyber Incident Response Specialist. 10+ years securing industrial, legal, medical, educational & banking clients.">
 <meta property="og:type" content="profile">
+<meta property="og:url" content="https://crcctcpr.github.io/whoami/">
+<meta property="og:image" content="https://crcctcpr.github.io/whoami/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carlos Cabrera — Information Security Specialist">
+<meta name="twitter:description" content="Cyber Incident Response Specialist · Incident Response · Threat Hunting · SIEM · Security+ · MITRE ATT&CK">
+<meta name="twitter:image" content="https://crcctcpr.github.io/whoami/og.png">
+<meta name="theme-color" content="#0a0e14">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🛡️&lt;/text&gt;&lt;/svg&gt;">
 <!-- Fail-safe: if JS is off, show everything (don't hide content behind reveal animations) -->
@@ -25,6 +34,7 @@
     <a href="#about">about</a>
     <a href="#skills">skills</a>
     <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
     <a href="#education">certs</a>
     <a href="#contact">contact</a>
   </div>
@@ -34,6 +44,7 @@
 <header id="top" class="hero">
   <div class="hero-inner reveal">
     <p class="kicker"><span class="blink">▌</span> whoami</p>
+    <p class="open-pill"><span class="pulse"></span> Open to opportunities</p>
     <h1>Carlos&nbsp;Cabrera</h1>
     <p class="role" id="role">Information Security Specialist</p>
     <p class="tagline">
@@ -43,6 +54,7 @@
     </p>
     <div class="hero-cta">
       <a class="btn primary" href="mailto:carlos@cabrerapr.com">Get in touch</a>
+      <a class="btn" href="resume.pdf" download="Carlos-Cabrera-Resume.pdf">↓ Download CV</a>
       <a class="btn" href="https://github.com/crcctcpr" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <ul class="hero-meta">
@@ -89,6 +101,10 @@
     <div class="card skill-group reveal">
       <h3>Security &amp; Detection</h3>
       <div class="chips"><span>Incident Response</span><span>Threat Hunting</span><span>SOC / NOC</span><span>Penetration Testing</span><span>Vulnerability Mgmt</span><span>Malware Sandboxing</span><span>Phishing Analysis</span></div>
+    </div>
+    <div class="card skill-group reveal">
+      <h3>Frameworks &amp; Standards</h3>
+      <div class="chips"><span>MITRE ATT&amp;CK</span><span>NIST</span><span>FINRA</span><span>HIPAA</span><span>SOC 2</span></div>
     </div>
     <div class="card skill-group reveal">
       <h3>Firewalls</h3>
@@ -198,6 +214,46 @@
   </div>
 </section>
 
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <h2 class="reveal"><span class="hash">#</span> Projects &amp; Portfolio</h2>
+  <div class="proj-grid">
+
+    <div class="card proj reveal">
+      <div class="proj-head"><h3>Self-Hosted Security Lab</h3><span class="proj-tag">home lab</span></div>
+      <p>A production-style lab I built and run to sharpen blue-team skills: hypervisor virtualization,
+      a segmented firewall with VLANs, a SIEM for log collection and alerting, self-hosted internal
+      services, and an isolated sandbox for safe malware detonation and analysis.</p>
+      <div class="chips small"><span>Proxmox</span><span>pfSense / OPNsense</span><span>Wazuh SIEM</span><span>VLAN segmentation</span><span>FlareVM</span><span>Docker</span></div>
+    </div>
+
+    <div class="card proj reveal">
+      <div class="proj-head"><h3>SecurityScripts</h3><span class="proj-tag">open source</span></div>
+      <p>A growing collection of security and incident-response scripts and tooling — practical utilities
+      from real analysis and response work.</p>
+      <div class="chips small"><span>Bash</span><span>PowerShell</span><span>Windows IR</span></div>
+      <a class="proj-link" href="https://github.com/crcctcpr/SecurityScripts" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="card proj reveal">
+      <div class="proj-head"><h3>Exam-Prep Study Apps</h3><span class="proj-tag">tooling</span></div>
+      <p>Self-built, offline, dependency-free study applications for security certifications
+      (Security+, AI-security) — weighted practice exams, flashcards, and notes. Demonstrates
+      curriculum design and front-end build skills.</p>
+      <div class="chips small"><span>JavaScript</span><span>HTML / CSS</span><span>Python</span></div>
+    </div>
+
+    <div class="card proj reveal">
+      <div class="proj-head"><h3>This Résumé Site</h3><span class="proj-tag">web</span></div>
+      <p>A self-contained, dependency-free single-page site (no framework, no build step) deployed on
+      GitHub Pages — the page you're reading.</p>
+      <div class="chips small"><span>Vanilla JS</span><span>Responsive</span><span>GitHub Pages</span></div>
+      <a class="proj-link" href="https://github.com/crcctcpr/whoami" target="_blank" rel="noopener">View source ↗</a>
+    </div>
+
+  </div>
+</section>
+
 <!-- ===== EDUCATION & CERTS ===== -->
 <section id="education" class="section">
   <h2 class="reveal"><span class="hash">#</span> Education &amp; Certifications</h2>
@@ -246,6 +302,7 @@
     <div class="contact-links">
       <a href="mailto:carlos@cabrerapr.com"><span class="ci">✉</span> carlos@cabrerapr.com</a>
       <a href="https://github.com/crcctcpr" target="_blank" rel="noopener"><span class="ci">⌥</span> github.com/crcctcpr</a>
+      <a href="resume.pdf" download="Carlos-Cabrera-Resume.pdf"><span class="ci">↓</span> Download résumé (PDF)</a>
       <span class="loc"><span class="ci">⌖</span> Puerto Rico · EN / ES</span>
     </div>
   </div>
