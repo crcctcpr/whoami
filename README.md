@@ -32,8 +32,9 @@ Or just open `index.html` directly in a browser (no server required — everythi
 
 - **Cyber Incident Response Specialist** @ Evertec — incident response, threat hunting, NIST/FINRA compliance
 - **Information Security Specialist** @ TeleMedik — security framework ownership, HIPAA compliance
-- **10+ years** across firewalls (Palo Alto, FortiGate, pfSense), SIEM/logging (Elastic, Graylog, Tenable),
-  endpoint (McAfee ePO, Defender, ESET), and SOC/NOC engineering
+- **10+ years** across firewalls (Palo Alto, FortiGate, pfSense), SIEM/logging (Elastic/ELK, Wazuh, Graylog, Tenable),
+  endpoint (Trellix ePO, Defender, ESET), and SOC/NOC engineering
+- **AI & security automation** — local LLMs (Ollama), Claude/Anthropic API, RAG, MCP, n8n, opencode, OpenClaw, Obsidian
 - Certs: Recorded Future Certified Analyst, CompTIA PenTest+ & A+, Tenable TCSA, Palo Alto PSE Endpoint
 
 ## Print / export to PDF
