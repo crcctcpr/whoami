@@ -44,4 +44,4 @@ background, and buttons for a clean one-pager.
 
 ---
 
-📫 **carlos@cabrerapr.com** · Puerto Rico · EN / ES
+📫 **carlos@cabrerapr.com** · EN / ES
